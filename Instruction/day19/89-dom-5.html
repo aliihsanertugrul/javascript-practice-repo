@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model-5</title>
+  </head>
+  <body>
+    <input type="text" id="txtName" />
+    <button id="btnId">Ekle</button>
+
+    <ul id="list"></ul>
+
+    <script>
+      document.getElementById("btnId").addEventListener("click", () => {
+        let txtNameEl = document.getElementById("txtName");
+        let listEl = document.getElementById("list");
+        let nameEl = txtNameEl.value;
+        // console.log(nameEl)
+        let newLi = document.createElement("li");
+        // console.log(newLi)
+
+        //console.log( newLi.innerText=nameEl)
+        newLi.innerHTML = nameEl;
+        newLi.style.color="green"
+        newLi.setAttribute("data-id",Math.floor(Math.random()*1000))
+
+        listEl.appendChild(newLi);
+
+        txtNameEl.value = "";
+        txtNameEl.focus();
+      });
+    </script>
+  </body>
+</html>

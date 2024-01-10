@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <script>
+      //verilen arraydaki max sayi bulunuz
+
+      let sayilar = [12, 56, 14, 67, 89, 33, 22];
+
+      const numbers=[1,9,7];
+
+
+      const getMaxNumber = (arr) => {
+        if (!Array.isArray(arr) || arr.length <= 0) {
+          return;
+        }
+
+        let maxNumber = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] > maxNumber) {
+            maxNumber = arr[i];
+          }
+        }
+
+       return maxNumber;
+      };
+
+      console.log(getMaxNumber(numbers))
+
+let a=[]
+console.log(getMaxNumber(numbers))
+
+
+
+
+
+    </script>
+  </body>
+</html>
+

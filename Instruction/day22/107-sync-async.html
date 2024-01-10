@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sync - Async</title>
+	</head>
+	<body>
+
+
+
+
+		<script>
+			const sum1 = (a, b) => {
+				return a + b;
+			};
+
+			const getCoordinates = (a, b) => {
+
+				// Burayı google ın distance API hizmetine bağlantı olarak kabul edelim
+				setTimeout( ()=> {
+					return a + b;
+				},10 )
+				// Yukarıdaki setTimeout kod bloğu asenkron olduğu için program akışı oradan gelecek return u beklemeden getCoordinates fonksiyonundan undefined döndürüyor. 
+				// asenkron yapılardan bu şekilde değer geri alınamaz. Bunun için callback yapıları kullanılır.
+
+			};
+
+			const total1 = sum1(23, 56);
+			console.log("Sayıların toplamı:", total1);
+
+			const total2 = getCoordinates(23, 56);
+			console.log("İki nokta arası mesafe:", total2);
+		</script>
+	</body>
+</html>

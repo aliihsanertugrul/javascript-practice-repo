@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btnClick">Click me</button>
+ 
+
+    <script>
+
+       document.getElementById("btnClick").addEventListener("click",()=>{
+
+        function processArray(arr) {
+  try {
+    if (!Array.isArray(arr)) {
+      throw new Error("Girdi bir dizi olmalıdır.");
+    }
+
+    if (arr.length === 0) {
+      throw new Error("Dizi boş olamaz.");
+    }
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] !== "number") {
+        throw new Error("Dizi elemanları sayı olmalıdır.");
+      }
+      sum += arr[i];
+    }
+
+    return sum;
+  } catch (error) {
+    console.error("Hata:", error.message);
+  }
+}
+
+console.log(processArray([1, 2, 3,8, 4,89, 5])); // 15
+//console.log(processArray([])); // Hata: Dizi boş olamaz.
+//console.log(processArray("not an array")); // Hata: Girdi bir dizi olmalıdır.
+//console.log(processArray([1, 2, "3", 4, 5])); // Hata: Dizi elemanları sayı olmalıdır.
+
+
+       })
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+
+        let globalScope=34;
+      //func scope
+      const topla = () => {
+        let a = 12;
+        console.log(globalScope+a)
+      };
+     // console.log(a);
+topla()
+
+const carpma = () => { 
+console.log(globalScope+3)
+let x=10;
+if(x==10){
+    let blockScope=20;
+    console.log(blockScope)
+    var z=67;
+    const w="Elmas";
+    // block scope icindeki var degiskeni kendini **bir ust** scope yerlstirir
+
+}
+//console.log(blockScope)
+console.log(z)
+//console.log(w)
+}
+//console.log(z)
+carpma()
+
+
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-1</title>
+  </head>
+  <body>
+    <h1><em>Hello Dom</em></h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+      necessitatibus cum ullam molestiae illum exercitationem architecto iste
+      asperiores ipsum sint aut nobis distinctio labore pariatur ut quibusdam,
+      alias suscipit dignissimos?
+    </p>
+    <p>
+         Cumque
+        necessitatibus cum ullam molestiae illum exercitationem architecto iste
+        asperiores ipsum sint aut nobis distinctio labore pariatur ut quibusdam,
+        alias suscipit dignissimos?
+      </p>
+
+    <ul class="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li id="iletisim">Contact</li>
+    </ul>
+
+    <script>
+      let h1El = document.querySelector("h1");
+      let pEl=document.querySelector("p")
+
+      console.log(h1El)
+      console.log(pEl)
+
+      console.log(h1El.innerText)
+      console.log(h1El.innerHTML)
+
+      h1El.innerText="<u>Merhaba Batch-196</u>"
+      h1El.innerHTML="<u> <em> Merhaba Batch-196 </em></u>"
+
+      const homeEl=document.querySelector(".menu li");
+      console.log(homeEl)
+
+      const aboutEl=document.querySelector(".menu li:nth-child(2)")
+      console.log(aboutEl)
+
+
+      const contactEl=document.querySelector("#iletisim")
+      console.log(contactEl)
+
+      contactEl.innerHTML=`<a href="#" > Contact Us </a>`   
+
+      h1El.innerHTML="<u> <em> Good Night Everyone</em></u>"
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Callback</title>
+	</head>
+	<body>
+		<script>
+			const asenkron1 = () => {
+				setTimeout(() => {
+					console.log("1. asenkron");
+				}, 1200);
+			};
+
+            const asenkron2 = () => {
+				setTimeout(() => {
+					console.log("2. asenkron");
+				}, 2500);
+			};
+
+            const asenkron3 = () => {
+				setTimeout(() => {
+					console.log("3. asenkron");
+				}, 800);
+			};
+
+
+
+            asenkron1();
+            asenkron2();
+            asenkron3();
+
+            // Asenkron yapılar birbirinden bağımsız yani ayrı thread lerde çalışırlar.
+
+
+		</script>
+	</body>
+</html>

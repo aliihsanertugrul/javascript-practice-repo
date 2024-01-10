@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+
+    <script>
+
+const koordinatlar = [-100, 150, -32, 43, -20];
+
+ //let toplamKoordinat=  koordinatlar.reduce((toplam,num)=>toplam+num,0)
+//console.log(toplamKoordinat)
+
+let tkoord=  koordinatlar.reduce((total,number)=>{
+
+    console.log(`total  ${total}  number ${number} `)
+
+
+return total+number;
+
+},10)
+
+console.log(tkoord)
+
+let sayilar=[4,7,34,8,9];
+  let reduceNumber= sayilar.reduce((carpim,sayi)=>carpim*sayi,1)
+  console.log(reduceNumber)
+
+    </script>
+    
+</body>
+</html>

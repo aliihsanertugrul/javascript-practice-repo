@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Case</title>
+  </head>
+  <body>
+    <!-- 
+        Bir Textbox tan alınan fiyat bilgisi 
+1500 den büyükse %15,
+1000 den büyükse %13,
+700 den büyükse %10,
+500 den büyükse %7,
+300 den büyükse %5,
+Diğer durumlarda %2 indirim uygulayıp sonucu yazan programı yapınız. 
+
+     -->
+
+    <input type="number" placeholder="Fiyat bilgisini giriniz" id="inp" />
+    <button onclick="hesapla()">Hesapla</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+      function hesapla() {
+        let inputEl = document.querySelector("#inp");
+        let resultEl = document.querySelector("#result");
+        let price = Number(inputEl.value);
+
+        let discount;
+
+        switch (true) {
+          case price > 1500:
+            discount = 15;
+            break;
+
+          case price > 1000:
+            discount = 13;
+            break;
+
+          case price > 700:
+            discount = 10;
+            break;
+
+          case price > 500:
+            discount = 7;
+            break;
+
+          case price > 300:
+            discount = 5;
+            break;
+          default:
+            discount = 2;
+        }
+
+        let totalPrice=price-(price*discount/100)
+        resultEl.innerHTML=`<u> Indirimli fiyat tutari sonucunda odemeniz gereken miktar: ${totalPrice.toFixed(2)} </u> `
+
+
+        inputEl.value=""
+
+
+
+      }
+    </script>
+  </body>
+</html>

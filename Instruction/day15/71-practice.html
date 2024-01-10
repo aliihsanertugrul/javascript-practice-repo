@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const euro = 31.55;
+      const usd = 28.86;
+      const tlFiyatlar = [5000, 150000, 5798, 6500, 11500, 78250, 115982];
+
+  let usdPriceList=    tlFiyatlar.map((price)=>(price/usd).toFixed(2));
+
+ let euroPriceList= tlFiyatlar.map((tutar)=>(tutar/euro).toFixed(2));
+
+ console.log(usdPriceList)
+ console.log(euroPriceList)
+
+
+    </script>
+  </body>
+</html>

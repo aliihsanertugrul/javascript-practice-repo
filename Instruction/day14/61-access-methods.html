@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access Methods</title>
+  </head>
+  <body>
+    <script>
+      let animals = [
+        "koala",
+        "cat",
+        "dog",
+        "cow",
+        "elephant",
+        "tiger",
+        "lion",
+        "koala",
+        "rabbit",
+        "fox",
+      ];
+     //concat() bir dizi ile bir diziyi veya bir degeri birlstirerek yeni bir dizi dondurur, mevcut dizi bozulmaz ayni kalir
+
+      let newAnimals = animals.concat(["snake"]);
+      console.log(newAnimals);
+
+      console.log(animals);
+      let hayvanlar = ["fil", "tilki", "tavsan", "kurt"];
+
+      let hayvanlarAlemi = animals.concat(hayvanlar);
+      console.log(hayvanlarAlemi);
+      console.log(animals);
+
+      let numbers = [1, 3, 5, 6];
+
+      console.log(animals.concat(numbers));
+
+      animals = animals.concat(["snake"]);
+      console.log(animals);
+
+      //includes() ==>dizinin belirttilen elamni icerip icermedigine bakar
+      // iceriyorsa true icermiyorsa false ciktisini verir
+      console.log(animals.includes("kartal")); //false
+      console.log(animals.includes("koala"));
+
+      //indexOf() bize dizideki elemanin ilk goruldugu yerdeki index nosunu verir
+      //eger elamn dizide yoksa bize -1 ciktisini verir
+      console.log(animals.indexOf("kartal")); //-1
+      console.log(animals.indexOf("koala")); //0
+
+      //lastIndexOf()
+      //bize dizideki elemanin son goruldugu yerdeki index nosunu verir
+      //saymaya soldan baslar
+
+      console.log(animals);
+      console.log(animals.lastIndexOf("koala"));
+
+      //join()
+      //bir dizi icindeki yer alana butun elemanlari ayirici icinde belirtilen seye(-,* vb) gibi ogelerle birlsitrirerek bize bir string olarak dondurur
+   let hayvanAdlari= animals.join("-*-");
+   console.log(hayvanAdlari)
+
+   //toString() dizinin icindeki elemanlari birlstirerek bize tek bir string dondururur
+   console.log(animals.toString())
+ 
+   //slice()
+   //bir dizinin elemanlarini belrtilen baslangic indexinden baslayip bitis indexine gore kopyasini olusturarak bize yeni bir array dondurur,bitis indexi dahil degildir
+   console.log(animals)
+  let newAnimallls=animals.slice(2,5);
+   console.log(animals)
+   console.log(newAnimallls)
+
+
+    </script>
+  </body>
+</html>

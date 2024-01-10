@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+
+		<title>Storage API</title>
+	</head>
+	<body>
+		
+        
+        
+        
+        <div
+			class="offcanvas offcanvas-bottom"
+			tabindex="-1"
+			id="ocPrivacyPolicy"
+			aria-labelledby="offcanvasLabel"
+		>
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasLabel">Privacy Policy</h5>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="offcanvas"
+					aria-label="Close"
+				></button>
+			</div>
+			<div class="offcanvas-body">
+                <button id="btnAccept" class="btn btn-outline-danger mb-3">Accept</button>
+				<p>We use essential cookies to make our site work. With your consent, we may also use non-essential cookies to improve user experience and analyze website traffic. By clicking "Accept", you agree to our website's cookie use as described in our Cookie Policy. You can change your cookie settings at any time by clicking "Preferences."</p>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+
+
+        <script>
+            const isPrivacyPolicyAccepted = localStorage.getItem("privacyPolicy");
+            const bsOffcanvas = new bootstrap.Offcanvas('#ocPrivacyPolicy');
+            const btnAccept = document.getElementById("btnAccept");
+
+            if(!isPrivacyPolicyAccepted){
+                bsOffcanvas.show();
+            }
+
+            btnAccept.addEventListener("click", ()=>{
+                localStorage.setItem("privacyPolicy", true);
+                bsOffcanvas.hide();
+            })
+
+            
+
+
+        </script>
+
+
+	</body>
+</html>

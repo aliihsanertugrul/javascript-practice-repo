@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-2</title>
+
+    <style>
+      .renk-1 {
+        background-color: skyblue;
+        color: rgb(4, 0, 255);
+        text-align: center;
+        padding: 15px;
+      }
+      .renk-2 {
+        background-color: rgb(138, 235, 135);
+        color: rgb(234, 0, 255);
+        text-align: center;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="h1El">Iyi Aksamlar Arkadaslar</h1>
+    <p class="about">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, eos!
+      Placeat suscipit aliquid dolore iusto similique totam expedita sed?
+      Molestiae eaque rerum ullam debitis quod vel explicabo aut saepe dicta.
+    </p>
+
+    <script>
+      const h1El = document.querySelector(".h1El").classList.add("renk-1");
+
+  /*     h1El.classList.remove("renk-1");
+      h1El.classList.add("renk-2");
+ */
+      /*
+      h1El.style.color="red"
+        h1El.style.backgroundColor="blue"
+        h1El.style.textAlign="center"
+ */
+    </script>
+  </body>
+</html>

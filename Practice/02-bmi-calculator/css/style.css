@@ -1,0 +1,152 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.title{
+    text-align: center;
+}
+
+.frmBmi{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:25px;
+}
+
+.frmBmi .form-group{
+    border:1px solid rgb(159, 159, 159);
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.frmBmi input:focus,
+.frmBmi input{
+    border:0;
+    outline:0;
+    font-size: 1.1rem;
+}
+
+.frmBmi input::placeholder{
+    font-size: 1.1rem;
+}
+
+
+.display{
+    background-color: gray;
+    height: 5px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.display > div[class^="section"]{
+    height: 5px;
+    position: relative;
+}
+
+.display > .section1{
+    background-image: linear-gradient(90deg, gray 70%, greenyellow);
+    flex:37% 0 0;
+}
+
+.display > .section2{
+    background-color: greenyellow;
+    flex:13% 0 0;
+}
+
+.display > .section3{
+    background-image: linear-gradient(90deg, greenyellow, pink);
+    flex:10% 0 0;
+}
+
+.display > .section4{
+    background-image: linear-gradient(90deg, pink, red);
+    flex:40% 0 0;
+}
+
+
+.display > div[class^="section"]::before{
+    display: block;
+    position: absolute;
+    top:0; left:0; right:0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-left:1px solid black;
+    padding: 0.2rem 0.3rem;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+.display > .section1::before{ 
+    content: "Thin";
+}
+
+.display > .section2::before{ 
+    content: "Ideal";
+}
+
+.display > .section3::before{ 
+    content: "Overweight";
+}
+
+.display > .section4::before{ 
+    content: "Obese";
+    border-right: 1px solid black;
+}
+
+.indicator{
+    position: absolute;
+    top:10px;
+    left:0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.indicator label{
+    position: absolute;
+    left:20px;
+    font-size: 0.8rem;
+    background-color: gray;
+    color: white;
+    padding:3px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/*
+
+0 ile 18 Arası VKE - Zayıf: / 37%
+19 ile 25 Arası VKE - Normal: / 13%
+26 ile 30 Arası VKE - Fazla Kilolu: /10%
+31 ile 50 VKE - Obez: 40%
+
+*/

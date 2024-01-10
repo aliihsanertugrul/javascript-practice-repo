@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-1</title>
+  </head>
+  <body>
+    <h1>DOCUMENT OBJECT MODEL</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+      laboriosam incidunt reiciendis veritatis ex perferendis aliquid, suscipit
+      eum illum, laudantium earum sed magni tempore fuga, saepe in porro quam
+      quasi!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+      laboriosam incidunt reiciendis veritatis ex perferendis aliquid, suscipit
+      eum illum, laudantium earum sed magni tempore fuga, saepe in porro quam
+      quasi!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+      laboriosam incidunt reiciendis veritatis ex perferendis aliquid, suscipit
+      eum illum, laudantium earum sed magni tempore fuga, saepe in porro quam
+      quasi!
+    </p>
+    <p id="aboutEl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+      laboriosam incidunt <b>reiciendis veritatis ex perferendis aliquid</b> , suscipit
+      eum illum, laudantium earum sed magni tempore fuga, saepe in porro quam
+      quasi!
+    </p>
+    <p class="pClass">
+     class ismine gore secim yapabiliriz 
+   
+    </p>
+
+    <script>
+
+     let aboutEl= document.getElementById("aboutEl");
+     console.log(aboutEl.innerHTML) 
+
+    let pEl= document.getElementsByTagName("p");
+    console.log(pEl[3].innerHTML)
+
+    let pClass= document.getElementsByClassName("pClass");
+    console.log(pClass[0].innerHTML)
+
+    </script>
+  </body>
+</html>

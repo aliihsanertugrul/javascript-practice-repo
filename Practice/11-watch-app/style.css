@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  padding: 50px;
+}
+
+.leftMenu {
+  flex: 1;
+}
+
+.search {
+  padding: 10px;
+  width: 13rem;
+  border: 2px solid black;
+}
+
+h1 {
+  color: rgb(128, 121, 121);
+  font-size: 2rem;
+  font-weight: 400;
+}
+.cats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.content {
+  flex: 4;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.product {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+img{
+    width: 150px;
+    height: 250px;
+}
+.name{
+    font-size: 1.5rem;
+}
+.priceText{
+    font-size: 1rem;
+}

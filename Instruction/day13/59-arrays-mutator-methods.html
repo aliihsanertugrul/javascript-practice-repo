@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mutator-methods</title>
+</head>
+<body>
+
+    <script>
+        let cars=[
+
+            "Ford",
+            "Honda",
+            "Hoyota",
+            "Tesla",
+            "Volvo",
+            "BMW",
+            "Mercedes",
+            "Audi",
+            "Nissan",
+            "Kia",
+            "Togg",
+            "anadol"
+        ]
+
+        console.log(cars)
+
+        //push()==> arrayin sonuna elaman ekler ve eklenen eleamnla birlikte arrayin son  lenghtini dondurur
+      
+        console.log( cars.push("Ferrari"))
+       // cars.push("Lamborgini") == cars[cars.length]="Lamborgini"; bu ikisi aynidir ama daha cok push() methodu kullanilir
+      
+       console.log(cars)
+
+    //pop() ==> arrayin sonundaki elamani siler ve silinen elemani dondurur
+     //  console.log( cars.pop())
+
+     //shift()==> bir arrayin basindaki elemani siler ve bize silinen elemani dondurur
+     console.log(cars.shift())
+     console.log(cars)
+
+     //unshift()==> bir arrayin basina eleman ekler ve bize lengthini dondurur
+     console.log(cars.unshift("Subaru"))
+     console.log(cars)
+
+     cars.unshift("@lelelelelele")
+
+     //sort()==>mutator method oldugu icin mevcut diziyi siralar
+     console.log(cars.sort())
+
+
+  /*    let arr=[5,7,1,9,0,2,3]
+     console.log(arr.sort())
+ */
+
+    </script>
+    
+</body>
+</html>

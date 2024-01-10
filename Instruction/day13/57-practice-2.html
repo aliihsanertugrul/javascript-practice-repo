@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice-2</title>
+  </head>
+  <body>
+    <script>
+      //Şeklindeki dizi elemanlarının değerini verilen oran kadar artıran fonksiyonu yazınız.
+      let price = [12, 56, 14, 67, 89, 33, 22];
+      const fiyatlar = [123,  5666, 126, 67];
+
+
+      const setPrices = (arr, rate) => {
+        if (!Array.isArray(arr) || arr.length <= 0) {
+          return;
+        }
+
+        if (rate <= 0) {
+          return;
+        }
+
+
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] = arr[i] + (arr[i] * rate) / 100;
+
+        //arr[0]    12    +   12     * 50 /100
+        }
+        return arr;
+
+      };
+
+      console.log(setPrices(price,50))
+      const newArr=setPrices(fiyatlar,30)
+      console.log(newArr)
+
+    </script>
+  </body>
+</html>

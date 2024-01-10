@@ -1,0 +1,42 @@
+.card{
+    border: 2px red solid;
+    padding: 100px;
+    margin: 3rem;
+    border-radius: 15px;
+    text-align: center;
+}
+.card input{
+    border: 3px black solid;
+    background-color: aqua;
+    padding: 12px 20px;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+}
+
+
+.card .btn-tahmin{
+border-radius: 10px;
+padding: 7px 12px;
+background-color: greenyellow;
+font-size: 1rem;
+color: rgb(86, 80, 80);
+font-weight: 800;
+cursor: pointer;
+display: none;
+
+}
+
+.card .btn-basla{
+    border-radius: 10px;
+    padding: 7px 12px;
+    background-color: rgb(252, 47, 255);
+    font-size: 1rem;
+    font-weight: 800;
+    color: rgb(86, 80, 80);
+    cursor: pointer;
+    }
+
+    .card label{
+        margin-top: 2rem;
+        display: inline-block;
+    }

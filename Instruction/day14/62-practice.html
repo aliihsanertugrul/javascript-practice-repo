@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <script>
+
+        
+      const arr = [12, -3, 67, 3, 4, -13, 15, -7];
+
+
+const hesapla = (arr) => {
+
+    let pToplam=0;
+    let nToplam=0;
+    for (let i = 0; i<arr.length; i++) {
+        if(arr[i]>0){
+            pToplam+=arr[i];
+
+        }else{
+            nToplam+=arr[i]
+        }
+    }
+    return pToplam-nToplam;
+}
+console.log(hesapla(arr))
+
+
+
+    </script>
+</body>
+</html>

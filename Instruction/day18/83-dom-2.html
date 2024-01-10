@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-2</title>
+
+    <style>
+.red{
+    background-color: red;
+    color: rgb(43, 226, 70);
+}
+
+    </style>
+</head>
+<body>
+    <main>
+    <p class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptates nam, assumenda saepe, necessitatibus quo aliquam voluptatibus a nisi explicabo vitae distinctio dolor nemo perspiciatis voluptate, blanditiis veritatis dignissimos fugit?</p>
+    
+    <ul class="list">
+        <li><a href="#">Link-1</a></li>
+        <li><a href="#">Link-2</a></li>
+        <li><a href="#">Link-3</a></li>
+        <li><a href="https://getbootstrap.com/" id="linkAbout"   >Link-4</a></li>
+        <li><a href="#">Link-5</a></li>
+    </ul>
+
+</main>
+<script>
+
+    document.getElementById("linkAbout").addEventListener("click",(e)=>{
+       // e.preventDefault()
+
+
+
+  let closest=   e.target.closest("main").querySelector(".about");
+
+closest.classList.add("red")
+
+    })
+
+    let listEl=document.querySelector(".list");
+    console.log(listEl.children)
+    console.log(listEl.children[3])
+    console.log(listEl.firstElementChild)
+    console.log(listEl.lastElementChild)
+
+    console.log(listEl.parentElement)
+    const linkAbout=document.getElementById("linkAbout").parentElement;
+    console.log(linkAbout.parentElement)
+
+    console.log(linkAbout.nextElementSibling)
+    console.log(linkAbout.previousElementSibling)
+
+//console.log(linkAbout.childNodes)
+//console.log(listEl.children[1])
+console.log(listEl.childNodes[1])
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>

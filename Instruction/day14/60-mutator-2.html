@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutatot methods-2</title>
+</head>
+<body>
+    <script>
+
+
+   let animals=[
+    "kedi",
+    "kopek",
+    "panda",
+    "horoz",
+    "tilki",
+    "tavşan",
+    "sincap",
+    "at",
+    "tavuk"
+   ]
+
+   //reverse() mevcut diziyi terse cevirir
+   console.log(animals)
+   animals.reverse()
+   console.log(animals)
+
+   //splice() mevcut dizimize eleman ekleyip silmemize imkan saglar
+
+   //start  deleteCount item1 item2
+   
+   console.log(animals.splice(2,2))
+   console.log(animals)
+
+animals.splice(1,0 ,"timsah")
+   console.log(animals)
+
+   animals.splice(0,0,"kuzu","keci")
+   console.log(animals)
+
+   animals.splice(3,0,"tavus kusu")
+   console.log(animals)
+
+
+   animals.splice(animals.length-1,0,"civciv")
+   console.log(animals)
+
+/*   splice(kacinci index'e yerlestirmek istersek index numarasi (required), silmek istedigimiz eleman sayisi(optional), optional olarak eklemek istedigimiz elemanlar)
+ */
+
+   animals.splice(animals.length,0,"tavsan")
+   console.log(animals)
+
+   animals.splice(5,0,"tazi")
+   console.log(animals)
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+body{
+    background-color: black;
+}
+
+.password-generator{
+    width: 350px;
+    margin: 20px auto;
+    /* width verilmis block elemanlari yatayda ortalamak icin margin right left auto denildiginde ortalar */
+}
+
+.password-generator > h5{
+    text-align: center;
+    color: #555555;
+}
+
+.password-generator .password{
+    color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.password-generator .password button{
+    font-size: 1.7rem;
+    padding-right: 0;
+}
+
+.password-generator .settings{
+    background-color: rgb(26, 26, 26);
+    margin-top: 20px;
+    padding: 20px;
+    color: #555555;
+    font-weight: 600;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.password-generator .settings .char-length-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-generator .settings .form-check{
+    margin-top:10px;
+}
+
+.password-generator .settings .strength{
+    background-color: black;
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.password-generator .settings button{
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 600;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+
+.weak{
+    color: red;
+}
+
+.normal{
+    color: yellow;
+}
+
+.powerful{
+    color: green;
+}

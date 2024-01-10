@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Callback Chain</title>
+	</head>
+	<body>
+		<script>
+			const siparisVer = (talep, cb) => {
+				console.log(`${talep} siparişi alındı`);
+				setTimeout(() => {
+                    const siparis = talep;
+					console.log(`${siparis} hazır`);
+                    cb(siparis);
+				}, 3000);
+			};
+
+
+            const yemekYe = (siparis, cb) => {
+				console.log(`${siparis} yemeğe başladık`);
+				setTimeout(() => {
+					console.log(`${siparis} bitti.`);
+                    cb();
+				}, 1500);
+			};
+
+            const filmIzle = () => {
+				console.log("Film başladı");
+				setTimeout(() => {
+					console.log("Film bitti");
+				}, 1000);
+			};
+
+            const patlakMısırYe = () => {
+				console.log("PAtlak mısır yemeğe başladık");
+				setTimeout(() => {
+					console.log("Patlak mısır bitti");
+				}, 2500);
+			};
+
+            /*
+            // Bu şekilde çağrıldığında her bir async fonksiyon bağımsız bir thread üzerinde çalıştığından kodlar istenilen sırada öalışamayacaktır. BElli bir sıraya göre çalışmayın zorlamak için callback chain yapısı kullnaılır.
+
+            siparisVer();
+            yemekYe();
+            filmIzle();
+            patlakMısırYe();
+            */
+
+
+            // Callback Chain
+
+            siparisVer( "pide", (siparis)=>{
+                yemekYe(siparis, ()=>{
+                    filmIzle();
+                    patlakMısırYe();
+                });
+            })
+
+
+
+		</script>
+	</body>
+</html>

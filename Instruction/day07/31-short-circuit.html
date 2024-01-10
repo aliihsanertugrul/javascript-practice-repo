@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Circuit</title>
+</head>
+<body>
+
+    <input type="number" placeholder="0-100 arasinda bir sayi giriniz" id="inpNumber">
+    <button onclick="goster()">Goster</button>
+
+   
+
+
+
+    <script>
+
+        function goster(){
+let inputEl=document.querySelector("#inpNumber")
+let number=Number(inputEl.value)
+
+let resultEl=document.querySelector("#result")
+
+let sonuc= (number<0||number>100) && alert("Lutfen 0-100 arasinda bir sayi giriniz sayin kullanici pleaseeeeeeee!!!!!")
+
+
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

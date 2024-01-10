@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Promise</title>
+	</head>
+	<body>
+		<button id="btnSip">Click Me</button>
+
+		<script>
+			const siparisVer = (talep) => {
+				return new Promise((resolve) => {
+					console.log(`${talep} siparişi alındı`);
+					setTimeout(() => {
+						const siparis = talep;
+						console.log(`${siparis} hazır`);
+						resolve(siparis);
+					}, 3000);
+				});
+			};
+
+			const yemekYe = (siparis) => {
+				return new Promise((resolve) => {
+					console.log(`${siparis} alındı ve yemeğe baaşladık`);
+					setTimeout(() => {
+						console.log(`${siparis} yendi`);
+						resolve();
+					}, 2000);
+				});
+			};
+
+			const filmIzle = () => {
+				return new Promise((resolve) => {
+					console.log(`Film izlemeye başladık`);
+					setTimeout(() => {
+						console.log(`Film bitti`);
+						resolve();
+					}, 3500);
+				});
+			};
+
+			const patlamisMisirYe = () => {
+				return new Promise((resolve) => {
+					console.log(`Mısır yemeğe başladık`);
+					setTimeout(() => {
+						console.log(`Mısır bitti`);
+						resolve();
+					}, 3000);
+				});
+			};
+
+			document.getElementById("btnSip").addEventListener("click", () => {
+				siparisVer("Pizza")
+					.then((siparis) => yemekYe(siparis))
+					.then(() => {
+						filmIzle();
+
+						patlamisMisirYe();
+					});
+			});
+		</script>
+	</body>
+</html>

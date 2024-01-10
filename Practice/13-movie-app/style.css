@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #0f171e;
+    --assistant-color: #1a242e;
+    --overview:#566B84;
+}
+
+body{
+    font-family:"Space Grotesk","sans serif";
+    background-color: var(--main-color);
+}
+header.headerEl{
+    background-color: var(--assistant-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+h1{
+    color: rgb(232, 225, 225);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.search{
+    background-color: var(--main-color);
+    padding:0.5rem 1rem;
+    width: 100%;
+    border: none;
+    font-family:inherit;
+    font-size: 1rem;
+    color: rgb(232, 225, 225);
+    transition: transform 0.5s ease-in;
+    border-radius: 15px;
+}
+
+.search:focus{
+    outline: none;
+    transform: scale(1.2);
+}
+
+.search::placeholder{
+    color: #00A4BB;
+    font-size: 1rem;
+}
+#main{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.movie{
+    width: 300px;
+    margin: 1rem;
+    background-color: var(--assistant-color);
+    position: relative; 
+    overflow: hidden;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.movie img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.movie-info{
+    color: #00A4BB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    letter-spacing: 0.5px;
+
+}
+
+.movie-info .vote{
+    background-color: var(--main-color);
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 90%;
+}
+.movie-info span.green{
+    color: green;
+}
+.movie-info span.gold{
+    color: orange;
+}
+.movie-info span.crimson{
+    color: red;
+}
+
+
+
+.overview{
+    background-color: var(--overview);
+    color: var(--main-color);
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+  bottom: 0; 
+   max-height: 100%;
+   overflow-y: auto;
+   transition: transform 0.5s ease-in;
+   transform: translateY(101%);
+
+
+}
+.overview h3{
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid  #00A4BB;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+footer{
+    background-color: var(--assistant-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: #00A4BB;
+    text-align: center;
+    
+
+}
+
+footer h3{
+letter-spacing: 5px;
+color: rgb(232, 225, 225);
+margin-bottom: 1rem;
+
+}
+footer ul li{
+    list-style-type: none;
+    margin-right: 2rem;
+    display: inline;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #00A4BB;
+    font-size:1.1rem ;
+    cursor: pointer;
+}
+
+footer small{
+    margin-top: 0.5rem;
+    color: var(--overview);
+    font-size: 0.9rem;
+    font-weight: 600;
+}

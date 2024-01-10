@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For loop</title>
+  </head>
+  <body>
+    <input type="number" id="inpNumber" placeholder="indirim oranini giriniz" />
+    <button onclick="indirimYap()">Indirim Yap</button>
+
+    <ul id="productList">
+      <li>Notebook<span>1500</span>$</li>
+      <li>Monitor<span>500</span>$</li>
+      <li>Klavye<span>10</span>$</li>
+      <li>Mouse<span>5</span>$</li>
+      <li>Memory Card<span>25</span>$</li>
+      <li>Usb Card<span>32</span>$</li>
+      <li>Monitor<span>362</span>$</li>
+      <li>headphone<span>122</span>$</li>
+    </ul>
+
+    <script>
+
+              function indirimYap(){
+
+      let indirimEl=document.querySelector("#inpNumber")
+      let indirimOrani=Number(indirimEl.value)
+      let productListEl=document.querySelectorAll("#productList li span")
+      //console.log(productListEl)
+
+      for(let i=0;i<productListEl.length;i++){
+         // console.log(i)
+      let fiyatlar=  productListEl[i].innerText
+
+   fiyatlar=fiyatlar-(fiyatlar*indirimOrani/100)
+   //console.log(fiyatlar)
+   productListEl[i].innerText=fiyatlar
+
+
+   console.log(productListEl[productListEl.length-1].innerText)
+
+
+      }
+
+
+
+              }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mantiksal Operatorler</title>
+  </head>
+  <body>
+    <script>
+      /*
+        0, FALSE, NULL, undefined, ""  ve NaN  bunlar false olur
+          dışındaki durumlar
+         TRUE  kabul edilir.
+
+         && op false arar 
+         || op true arar
+
+        */
+
+      let x = false;
+      let y = true;
+      let z = true;
+      let t = "false";
+      let m = "kedi";
+      let n = "kuş";
+      let k = "";
+
+      let result1 = y && z && m;
+      console.log(result1);
+
+      let result2 = t || m || undefined;
+      console.log(result2);
+
+
+
+      let a = true;
+      let b = true;
+      let c = false;
+      console.log(a && b || c);
+
+    </script>
+  </body>
+</html>

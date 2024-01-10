@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <script>
+      const bireyler = [
+        "Mustafa",
+        "Murat",
+        "Ahmet",
+        "mustafa",
+        "Ayşe",
+        "Canan",
+        "Cem",
+        "Ahmet Kemal",
+
+      ];
+
+      const filtrelenmisIsimler = (harf) => {
+      const filteredNames=  bireyler.filter((birey)=>birey.startsWith(harf));
+        return filteredNames;
+      };
+
+      console.log(filtrelenmisIsimler("M"))
+      console.log(filtrelenmisIsimler("C"))
+      console.log(filtrelenmisIsimler("A"))
+
+
+    </script>
+  </body>
+</html>

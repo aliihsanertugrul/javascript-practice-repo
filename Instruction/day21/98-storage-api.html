@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage API</title>
+</head>
+<body>
+
+    <h3 id="lblWelcome">Welcome to my app</h3>
+
+
+    <script>
+
+        console.log(localStorage.getItem("counter"));
+        let counterVal = Number(localStorage.getItem("counter"));
+        /* if(!counterVal){
+            counterVal = 1;
+        }
+        else{
+            counterVal++;
+        }
+ */
+        localStorage.setItem("counter", ++counterVal);
+
+
+        document.getElementById("lblWelcome").innerHTML = `You visited this app for ${counterVal} times`;
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Donusumleri</title>
+  </head>
+  <body>
+    <script>
+      let yas = "33";
+      console.log(yas, typeof yas);
+
+      yas = Number(yas);
+      console.log(yas, typeof yas);
+
+      /*      let maas=prompt("Maasinizi giriniz")
+        console.log(maas,typeof(maas))
+
+        maas=Number(maas)
+        console.log(maas,typeof(maas)) */
+
+      /*  let a=prompt("1.sayiyi giriniz")
+        let b=prompt("2.sayiyi giriniz")
+        a=parseInt(a)
+        b=parseFloat(b)
+        console.log(a+b) */
+
+      //NaN hata degildir bir degerdir
+      let result = "123lkj";
+      result = Number(result);
+      console.log(result, typeof result);
+
+      //hata vermez ve de infinty degerini dondurur
+      let result2 = 35 / 0;
+      console.log(result2);
+
+      //Boolean
+
+      //0, null, undefined,NaN ve " "   bunlarin Boolena cevrildiginde false degeri verir
+      //bunlarin disindakiler ise true ciktisini verir
+
+      let x = null;
+      x = Boolean(x);
+      console.log(x);
+      let y = 1;
+      y = Boolean(y);
+      console.log(y);
+
+      //numbere cevirme
+      let z = "5";
+      z = z * 1;
+      console.log(typeof z);
+
+      //Stringe cevirme
+      let w = 5;
+      w = "" + w;
+      console.log(typeof w);
+
+      let k = 555;
+      k = String(k);
+      console.log(k, typeof k);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        let car={
+
+            brand:"Ford",
+            model:"Mustang",
+            color:"Crimson",
+            year:2020,
+            engine:{
+               size:3.5,
+               type:"V8",
+               cylinders:8,
+               tork:474
+
+
+            },
+            wheels:4,
+            "kapi sayisi":"dort",
+
+            start:()=>{
+                console.log("Starting the car")
+            }
+
+
+        }
+
+        //1.yol 
+        console.log(car,typeof(car))
+        console.log(car.engine.tork)
+        console.log(car.start())
+
+      
+
+        //2.yol
+        console.log(car['color'])
+        //not: eger ki benim objectimdeki bir propertinin adi bosluklar iceriyorsa 2.yontemi kullanarak onu dizinin indexi seklinde gosterebiliriz
+          console.log(car['kapi sayisi'])
+
+
+          //entries()
+    console.log(Object.entries(car))
+
+         //keys()
+         console.log(Object.keys(car))
+
+         //values()
+         console.log(Object.values(car.engine))
+     car.color="green";
+     console.log(car.color="yellow")
+     console.log(car)
+     console.log(Object.values(car))
+
+
+    </script>
+</body>
+</html>

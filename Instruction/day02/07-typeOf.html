@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeOf</title>
+</head>
+<body>
+
+    <script>
+
+
+let x1=34;
+let x2="34";
+let x3=true;
+let x4=34n;
+let x5=34.56;
+let x6;
+let x7=null
+let x8=[];
+let x9={"name":"Ali"};
+let x10="25"-2;
+
+let x11="Kirmizigul";
+
+
+console.log(x1,typeof(x1),isNaN(x1))
+console.log(x2,typeof(x2),isNaN(x2))
+console.log(x3,typeof(x3),isNaN(x3))
+//console.log(x4,typeof(x4),isNaN(x4))//07-typeOf.html:30 Uncaught TypeError: Cannot convert a BigInt value to a number
+  
+
+console.log(x5,typeof(x5),isNaN(x5))
+console.log(x6,typeof x6,isNaN(x6))
+console.log(x7,typeof x7,isNaN(x7))//object ///nullda false vermesinin sebebi 0 olarak algiladigi icin
+console.log(x8,typeof x8,isNaN(x8))//object
+console.log(x9,typeof x9,isNaN(x9))//object
+console.log(x10,typeof x10,isNaN(x10))//number
+console.log(isNaN(x11))
+
+
+var name="Ali";
+var name="Veli";
+let name1="Cevdet";
+
+let marka="Adidas";
+//var marka="";
+
+
+let bolme=35/0;
+console.log(bolme,typeof(bolme),isNaN(bolme))//Infinity 'number' false
+
+    </script>
+    
+</body>
+</html>

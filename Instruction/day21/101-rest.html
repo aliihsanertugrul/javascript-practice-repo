@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rest Operator</title>
+	</head>
+	<body>
+		<script>
+			const getAverage = (firstName, lastName, ...scores) => {
+
+				const total = scores.reduce( (t,x)=> t+x, 0);
+				const average = total / scores.length;
+
+				return `The scores average of ${firstName} ${lastName} is ${average}`;
+
+			};
+
+			const result = getAverage("Ali", "Gel", 93, 56, 78, 84, 87);
+			console.log(result)
+		</script>
+	</body>
+</html>

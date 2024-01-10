@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do while loop</title>
+  </head>
+  <body>
+    <input type="number" placeholder="sayi giriniz" id="inp" />
+    <button onclick="hesapla()">Hesapla</button>
+    <h3 id="snc"></h3>
+
+    <script>
+      function hesapla() {
+        let inputEl = document.querySelector("#inp");
+        let number = Number(inputEl.value);
+        let sonuc = document.querySelector("#snc");
+
+        if(number<0){
+            alert("lutfen pozitif bir sayi girniz")
+            inputEl.value=""
+            sonuc.innerHTML=""
+            inputEl.focus()
+            return;
+
+        }
+
+
+        let faktoriyel=1;
+
+        do{
+          
+            faktoriyel*=number;
+         number--
+
+
+
+
+
+        }while(number>1);
+
+      sonuc.innerHTML=`Girdiginiz sayinin faktoriyeli: ${faktoriyel}` 
+
+      //inputEl.value=faktoriyel
+
+
+      }
+    </script>
+  </body>
+</html>

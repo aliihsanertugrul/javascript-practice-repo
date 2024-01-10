@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="password-generator">
+      <h5>Password Generator</h5>
+
+      <div class="password">
+        <span id="lblPassword"></span>
+        <button id="btnCopy" class="btn btn-link">
+          <i class="fa-solid fa-copy"></i>
+        </button>
+      </div>
+
+      <div class="settings">
+        <div>
+          <label for="rangeCharLength" class="form-label char-length-label">
+            <span>Character Length</span>
+            <strong id="lblCharLength">0</strong>
+          </label>
+          <input
+            type="range"
+            class="form-range"
+            min="0"
+            max="20"
+            value="0"
+            id="rangeCharLength"
+          />
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="chkUppercase"
+          />
+          <label class="form-check-label" for="chkUppercase">
+            Include Uppercase Letters
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="chkLowercase"
+          />
+          <label class="form-check-label" for="chkLowercase">
+            Include Lowercase Letters
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="chkNumbers"
+          />
+          <label class="form-check-label" for="chkNumbers">
+            Include Numbers
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="chkSymbols"
+          />
+          <label class="form-check-label" for="chkSymbols">
+            Include Symbols
+          </label>
+        </div>
+
+        <div class="strength">
+          <h6>Strength</h6>
+          <span id="lblStrength">****</span>
+        </div>
+
+        <button id="btnGenerate" class="btn btn-primary btn-lg">
+          GENERATE <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

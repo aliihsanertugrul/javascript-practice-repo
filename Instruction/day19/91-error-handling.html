@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+
+
+    <script>
+
+        const bolmeIslemi = (a,b) => { 
+
+            try {
+                if(b===0){
+                    throw new Error("Bir sayı 0'a bölünemez")
+                }
+                return a/b;
+            } catch (error) {
+                console.error("Hata olustu:",error.message)
+                
+            }finally{
+
+                console.log("İslem tamamlandı")
+
+
+            }
+         }
+
+         
+         console.log(bolmeIslemi(4,2))
+
+    </script>
+
+    
+</body>
+</html>

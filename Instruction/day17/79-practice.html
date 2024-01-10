@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <!-- Bir Firma, 3000 USD den az olan maaşlara %10 zam yapmak  istiyor ve zam yapılan bu kişilere toplam kaç USD ödeneceğini bilmek istiyor.  İlgili programı yazınız.
+ -->
+    <script>
+
+  const maaslar = [3000, 2891, 3500, 4200, 7000, 2500];
+
+ let newTotalSalary=  maaslar.
+ filter((maas)=>maas<=3000)
+ .map((maas)=>maas*1.1)
+ .reduce((total,salary)=>total+salary,0).toFixed(2)
+
+ console.log(newTotalSalary)
+
+
+
+    </script>
+</body>
+</html>

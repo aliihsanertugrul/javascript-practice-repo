@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reference Type-Value Type</title>
+  </head>
+  <body>
+    <script>
+      //value type
+
+      let x = 55;
+
+      let y=x;
+
+      console.log(x)
+      console.log(y)
+
+      console.log(x==y)
+      y=10;
+      console.log(y)
+
+
+      //reference type
+
+   const car1={marka:"BMW", color:"Blue" }
+
+   const car2=car1
+
+      console.log(car1)
+      console.log(car2)
+
+     console.log(car1===car2)
+
+
+      car2.color="green"
+
+      console.log(car1)
+      console.log(car2)
+
+      console.log(car1==car2)
+
+console.log({meyve:"elma"}=={meyve:"elma"})
+console.log([]==[])
+
+
+let computer1={cpu:"intel",ram:"32gb",SSD:"1TB"}
+let computer2=computer1
+
+console.log(computer1)
+console.log(computer2)
+computer2.cpu="AMD";
+
+console.log(computer1)
+console.log(computer2)
+
+let j={meyve:"armut"}
+let k={meyve:"armut"}
+
+
+console.log(j==k)
+
+
+
+    </script>
+  </body>
+</html>

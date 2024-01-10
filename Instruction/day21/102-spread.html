@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spread Operator</title>
+	</head>
+	<body>
+		<script>
+			const sum = (n1, n2, n3, n4) => {
+				return n1 + n2 + n3 + n4;
+			};
+
+            const arr = [34,56,23,122];
+
+            //const result = sum(arr[0], arr[1], arr[2], arr[3]);
+            const result = sum(...arr);
+            console.log(result);
+
+		</script>
+	</body>
+</html>

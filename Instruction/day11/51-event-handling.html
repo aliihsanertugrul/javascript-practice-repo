@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        button{
+            padding: 10px 20px;
+            margin: 5rem;
+            font-size: 1.4rem;
+            background-color: aqua;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #btnHello{
+            padding: 10px 20px;
+            margin: 5rem;
+            font-size: 1.4rem;
+            background-color: rgb(217, 0, 255);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #btnPrivet{
+            padding: 10px 20px;
+            margin: 5rem;
+            font-size: 1.4rem;
+            background-color: orange;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #btnHallo{
+            padding: 10px 20px;
+            margin: 5rem;
+            font-size: 1.4rem;
+            background-color: rgb(0, 204, 255);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+       #btnBonjourno{
+        background-color: crimson;
+        color: white;
+
+}
+
+    </style>
+</head>
+<body>
+    <button onclick="merhabaDe()" >Selam</button>
+    <button id="btnHello" >Hello</button>
+    <button id="btnPrivet">Privet</button>
+    <button id="btnHallo">Hallo</button>
+    <button id="btnBonjourno">Bonjourno</button>
+
+
+
+
+    <script>
+        //1.yontem
+        function merhabaDe(){
+            alert("Merhaba Event Handling")
+        }
+        //2.yontem
+        function sayHello(){
+            alert("2.yontem kullanimi")
+        }
+       let btn= document.querySelector("#btnHello")
+       btn.onclick=sayHello
+       //Note burada sayHello() methodu bu sekilde kullanilamaz sebebi ise method call edildigi icin  onClick eventi kullanilmamis oluyor
+
+       //3.yontem
+       const privet = () => { 
+        console.log(" privet druzya eto 3.metod")
+        }
+
+     let btn2=  document.querySelector("#btnPrivet");
+     btn2.addEventListener("click",privet)
+
+     //4.yontem-arrow-func
+  
+      let btn3=document.getElementById("btnHallo")
+      btn3.addEventListener("click",()=>{
+        //sayHallo()
+        //note:egerki disarda bir method yazip addEventLister icinde cagirdigimizda met call ifadesini de eklememiz gertekir yani  sayHallo() gibi
+
+       // alert("4.yontem")
+
+       const upperStr = (str) => str.toUpperCase();
+       console.log(upperStr("ali"))
+      })
+
+   const sayHallo = () => { 
+alert("Hallo 4.yontem")
+
+      }
+
+     document.getElementById("btnBonjourno").addEventListener("mouseenter",()=>{
+
+        document.getElementById("btnBonjourno").style.backgroundColor="green"
+     
+      }) 
+
+      
+
+      document.getElementById("btnBonjourno").addEventListener("mouseleave",()=>{
+        document.getElementById("btnBonjourno").style.backgroundColor="black"
+     
+})
+
+      
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sync - Async</title>
+	</head>
+	<body>
+
+		<h1 id="lblDistance">Loading...</h1>
+
+
+		<script>
+			const sum1 = (a, b) => {
+					
+				return a + b;
+			};
+
+			sum1(12, 35)
+
+
+			
+
+			const getCoordinates = (a, b, cb) => {
+				
+				// Burayı google ın distance API hizmetine bağlantı olarak kabul edelim
+				setTimeout( ()=> {
+					const distance = a + b;
+					cb(distance);
+				},3000 )
+			};
+
+			const total1 = sum1(23, 56);
+			console.log("Sayıların toplamı:", total1);
+
+			const total2 = getCoordinates(23, 56, (data)=>{
+				//alert("Hello " + data)
+				console.log("İki nokta arası mesafe:", data);
+
+				const lblDistance = document.getElementById("lblDistance");
+				lblDistance.innerHTML = data;
+				
+			});
+
+			
+			console.log("Diğer kodlar")
+			console.log("Diğer kodlar")
+			console.log("Diğer kodlar")
+			console.log("Diğer kodlar")
+			console.log("Diğer kodlar")
+			console.log("Diğer kodlar")
+			console.log("Diğer kodlar")
+			console.log("Diğer kodlar")
+			console.log("Diğer kodlar")
+		</script>
+	</body>
+</html>

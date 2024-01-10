@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+
+/* 
+        forEach() yöntemi, bir array deki her öğe için sağlanan bir işlevi çağırır ve hiçbir şey döndürmez. Bu yöntem, dizi öğelerinin değerlerini değiştirebilir (mutate).for each arrayindaki her elaman icin her seferinde fonksiyonu cagirarak calistiriliyor bu isleme call back denilir
+        
+    map() yöntemi, bir arraydeki her öğe için sağlanan bir işlevi çağırır ve işlevin sonuçlarıyla yeni bir array oluşturur. Bu yöntem, orijinal arrayi değiştirmez (immutable).
+ */
+
+let cities=[
+        "karachi",
+        "lahore",
+        "islamabad",
+        "multan",
+        "peshawar",
+        "delhi",
+        "istanbul",
+        "izmir",
+        "kabul",
+        "kathmandu",
+    ];
+
+  let buyukHarfliSehirler = cities.map((city)=>console.log(city.toUpperCase()))
+
+ let mixedCities=  cities.map((item)=>{
+
+    if(!item.startsWith("k")){
+        return item.toUpperCase()
+
+    }else{
+        return item;
+    }
+
+
+  })
+
+  console.log(mixedCities)
+
+
+
+
+    </script>
+    
+</body>
+</html>

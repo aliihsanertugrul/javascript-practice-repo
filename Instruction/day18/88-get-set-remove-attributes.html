@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    input{
+        margin: 0.5rem;
+    }
+    </style>
+</head>
+<body>
+
+    <input type="number" id="tcNo">
+    <button type="button" id="btnSubmit" disabled >Submit</button>
+
+    <script>
+
+let btnSubmit=document.getElementById("btnSubmit");
+
+document.getElementById("tcNo").addEventListener("input",(e)=>{
+
+  
+   let tcNoINp=e.target.value
+   if(tcNoINp.length==11){
+    btnSubmit.removeAttribute("disabled")
+    console.error("basarili")
+   }else{
+    btnSubmit.setAttribute("disabled",true)
+    //btnSubmit.setAttribute("disabled","disabled")
+   }
+
+ console.log(e.target.value)
+
+})
+
+
+
+    </script>
+    
+</body>
+</html>

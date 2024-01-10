@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rest Operator</title>
+	</head>
+	<body>
+		<script>
+			const sum1 = (a, b) => {
+				return a + b;
+			};
+
+			console.log(sum1(12, 45));
+			console.log(sum1(12, 45, 12, 56, 78, 34, 67));
+			console.log(sum1(12, 45, 67, 212, 45));
+
+			// REST
+
+			const sum2 = (...nums) => {
+				const total = nums.reduce((t, x) => t + x, 0);
+                return total;
+			};
+
+			console.log(sum2(12, 45));
+			console.log(sum2(12, 45, 12, 56, 78, 34, 67));
+			console.log(sum2(12, 45, 67, 212, 45));
+		</script>
+	</body>
+</html>

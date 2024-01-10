@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Destructuring</title>
+	</head>
+	<body>
+		<script>
+			const person = {
+				firstName: "Ali",
+				lastName: "Gel",
+				country: "Germany",
+				department: "IT",
+				salary: 5000,
+			};
+
+            // Geleneksel yöntem
+			const message1 = `${person.firstName} ${person.lastName} isimli çalışanımız ${person.department} departmanında çalışmakta olup maaşı ${person.salary}$ dır.`;
+            console.log(message1)
+
+            // DEstructuring yöntemi
+            // person isimli nesnenin field larından yeni değişkenler oluşturulur
+            const { firstName, lastName, department, salary } = person;
+            const message2 = `${firstName} ${lastName} isimli çalışanımız ${department} departmanında çalışmakta olup maaşı ${salary}$ dır.`;
+
+            console.log(message2)
+
+
+		</script>
+	</body>
+</html>

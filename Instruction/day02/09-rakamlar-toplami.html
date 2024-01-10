@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakamlar Toplami</title>
+</head>
+<body>
+
+    <script>
+        //verilen 3 basamakli sayinin rakamlar toplamini bulunuz
+
+       //==> birlerbas=sayi%10
+
+        let sayi=987;
+
+
+        let birlerBas=0;
+        let rakamlarToplami=0;
+
+        birlerBas=sayi%10;
+        rakamlarToplami+=birlerBas; //rakamlarToplami=birlerBas+rakamlarToplami
+        sayi/=10;
+
+        birlerBas=sayi%10;
+        rakamlarToplami+=birlerBas; //rakamlarToplami=birlerBas+rakamlarToplami
+        sayi/=10;
+
+        birlerBas=sayi%10;
+        rakamlarToplami+=birlerBas; //rakamlarToplami=birlerBas+rakamlarToplami
+        sayi/=10;
+
+
+console.log(rakamlarToplami)
+console.log(Math.floor(rakamlarToplami))
+    </script>
+    
+</body>
+</html>

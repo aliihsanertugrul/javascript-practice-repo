@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <h1 class="title">BMI Calculator</h1>
+
+    <div class="display">
+      <div class="section1"></div>
+      <div class="section2"></div>
+      <div class="section3"></div>
+      <div class="section4"></div>
+      <span class="indicator">
+        <i class="fa-solid fa-chevron-up"></i>
+        <label>0</label>
+      </span>
+    </div>
+
+    <form class="frmBmi">
+      <div id="formGroupWeight" class="form-group">
+        <i class="fa-solid fa-weight-scale"></i>
+        <input
+          type="number"
+          id="txtWeight"
+          placeholder="Your weight"
+          oninput="calculate(event)"
+        />
+        <span>Kg</span>
+      </div>
+
+      <div id="formGroupHeight" class="form-group">
+        <i class="fa-solid fa-ruler"></i>
+        <input
+          type="number"
+          id="txtHeight"
+          placeholder="Your height"
+          oninput="calculate(event)"
+        />
+        <span>cm</span>
+      </div>
+    </form>
+    <script src="js/script.js"></script>
+  </body>
+</html>

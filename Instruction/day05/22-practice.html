@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <style>
+      input {
+        background-color: aqua;
+        border-radius: 5px;
+        color: red;
+      }
+      button {
+        background-color: red;
+        border-radius: 5px;
+        color: chartreuse;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" id="sayi1" />
+    <input type="number" id="sayi2" />
+    <button type="button" onclick="topla()">Topla</button>
+    <p class="sonuc"></p>
+
+    <script>
+      function topla() {
+        let inputEl1 = document.querySelector("#sayi1")
+        let inputEl2 = document.querySelector("#sayi2")
+        let sonucEl = document.querySelector(".sonuc");
+
+        let sonuc = Number(inputEl1.value) + Number(inputEl2.value);
+
+        //console.log(sonuc)
+
+        sonucEl.innerHTML = `Sonuc:  ${sonuc}`;
+
+        inputEl1.value=""
+        inputEl2.value=""
+        
+      }
+    </script>
+  </body>
+</html>

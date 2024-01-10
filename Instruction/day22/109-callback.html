@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sync - Async</title>
+	</head>
+	<body>
+
+		
+		<script>
+			
+			const siparisVerdik = (talep, cb) => { 
+				console.log(`${talep} hazırlanıyor...`);
+				setTimeout( ()=> {
+					console.log(`${talep} hazır`);
+					const siparis = talep;
+					cb(siparis);
+				}, 5000);
+			}
+			
+			console.log("AVM ye gittik");
+			console.log("Bowling oynadık");
+			console.log("Karnımız acıktı");
+
+			siparisVerdik("lahmacun", (sip)=>{
+				console.log(`${sip} teslim alındı`);
+				console.log("Afiytle yendi")
+			});
+			console.log("Ayakkabı bakmaya git");
+
+
+
+
+
+		</script>
+	</body>
+</html>
